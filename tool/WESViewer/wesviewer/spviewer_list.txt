@@ -1,0 +1,6 @@
+ts100_background.csv,(test)[TS100] ON
+ts100_cs137.csv,(test)[TS100] Cs-137
+ts100_co60.csv,(test)[TS100] Co-60
+nano_cs137.xml,(test)[TS100] Cs-137
+po210_1MBq.xml,(test) Po-210@1MBq
+Th232 - d40-h6.xml,Th-232
