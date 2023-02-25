@@ -6,6 +6,9 @@
 // Released under the MIT license by SAWATARI Mikage
 // http://www.mikage.to/radiation/spviewer/
 // 
+//Translation and Modification by XkXiaoYi/Yonaka
+//
+//
 
 $(document).ready(function() {
 	spviewer_init();
@@ -211,7 +214,7 @@ function init_list(files) {
 			var checked = (loadfile == field[0]) ? ' checked' : '';
 			html += '<input type="radio" name="file" value="' + field[0] + '" ' + checked + '>';
 			html += '</td><td>';
-			html += '[<a href="../spviewer/' + field[0] + '">DL</a>] ';
+			html += '[<a href="' + field[0] + '">DL</a>] ';
 			html += field[1];
 			html += '</td></tr>';
 		}
@@ -317,7 +320,7 @@ function init_list_multi(files) {
 			}
 			html += '<input type="checkbox" name="file" value="' + field[0] + '" ' + checked + '>';
 			html += '</td><td>';
-			html += '[<a href="../spviewer/' + field[0] + '">DL</a>] ';
+			html += '[<a href="' + field[0] + '">DL</a>] ';
 			html += field[1];
 			html += '</td></tr>';
 		}
@@ -2225,7 +2228,7 @@ function draw_graph_emf211_spectrum(file, file_comment, data) {
 		
 		var filename = file.replace(/\..*$/, "");
 		
-		additional_sp_info_html += '<div><img src="../spviewer/' + filename + '.' + ext + '"><br><br></div>';
+		additional_sp_info_html += '<div><img src="' + filename + '.' + ext + '"><br><br></div>';
 	}
 	
 	
@@ -2585,7 +2588,7 @@ function draw_graph_emf211b_spectrum(file, file_comment, data) {
 //	if(file_comment.match(/^ *\[#([^\]]+)\]/)) {
 //		var ext = RegExp.$1;
 //		var filename = file.replace(/\..*$/, "");
-//		additional_sp_info_html += '<div><img src="../spviewer/' + filename + '.' + ext + '"><br><br></div>';
+//		additional_sp_info_html += '<div><img src="' + filename + '.' + ext + '"><br><br></div>';
 //	}
 	
 	if(isotope_info['濃度']) {
@@ -2746,7 +2749,7 @@ function draw_graph_at1320_spectrum(file, file_comment, data) {
 		
 		var filename = file.replace(/\..*$/, "");
 		
-		additional_sp_info_html += '<div><img src="../spviewer/' + filename + '.' + ext + '"><br><br></div>';
+		additional_sp_info_html += '<div><img src="' + filename + '.' + ext + '"><br><br></div>';
 	}
 	
 	
@@ -5547,7 +5550,7 @@ function print_sp_info(spectrum) {
 	document.location.hash = "#__" + encodeURIComponent(spectrum['file']) + "//" + spectrum['no'];
 	var url = document.location.protocol + "//" + document.location.host + document.location.pathname + document.location.hash;
 	html += '<p>URL: ';
-	html += '<a href="../spviewer/' + url + '" target="_blank">' + url + '</a></p>';
+	html += '<a href="' + url + '" target="_blank">' + url + '</a></p>';
 	
 	html += '<table class="csv">';
 	for(var i in sp_info) {
@@ -5581,7 +5584,7 @@ function print_sp_info_compare(spectrums) {
 		+ spectrums[1]['no'];
 	var url = document.location.protocol + "//" + document.location.host + document.location.pathname + document.location.hash;
 	html += '<p>URL: ';
-	html += '<a href="../spviewer/' + url + '" target="_blank">' + url + '</a></p>';
+	html += '<a href="' + url + '" target="_blank">' + url + '</a></p>';
 	
 	if(spectrums[1]['additional_sp_info_html']) {
 		html += '<br>' + spectrums[1]['additional_sp_info_html'];
@@ -5643,7 +5646,7 @@ function print_sp_info_multi(spectrums) {
 	document.location.hash = hash;
 	var url = document.location.protocol + "//" + document.location.host + document.location.pathname + document.location.hash;
 	html += '<p>URL: ';
-	html += '<a href="../spviewer/' + url + '" target="_blank">' + url + '</a></p>';
+	html += '<a href="' + url + '" target="_blank">' + url + '</a></p>';
 	
 	html += '※スペクトルファイルの詳細情報は[スペクトル表示]で１ファイルのみ選んだときのみ表示されます．<br>';
 	
