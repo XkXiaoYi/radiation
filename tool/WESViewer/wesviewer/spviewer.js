@@ -202,7 +202,7 @@ function init_list(files) {
 	
 	var html = '';
 	
-	html += '[光谱显示][<a href="#" id="compare_list">BG光谱对比（Ｂ－Ａ）</a>][<a href="#" id="multi_list">多光谱比较</a>]';
+	html += '[显示光谱][<a href="#" id="compare_list">BG光谱对比（Ｂ－Ａ）</a>][<a href="#" id="multi_list">多光谱比较</a>]';
 	
 	html += '<table class="csv">';
 	html += '<tr><th>－</th><th>光谱文件</th></tr>';
@@ -251,7 +251,7 @@ function init_list_compare(files) {
 	
 	var html = '';
 	
-	html += '[<a href="#" id="list">光谱显示</a>][BG光谱对比（Ｂ－Ａ）][<a href="#" id="multi_list">多光谱比较</a>]';
+	html += '[<a href="#" id="list">显示光谱</a>][BG光谱对比（Ｂ－Ａ）][<a href="#" id="multi_list">多光谱比较</a>]';
 	
 	html += '<table class="csv">';
 	html += '<tr><th>Ａ(BG)</th><th>Ｂ</th><th>光谱文件</th></tr>';
@@ -304,7 +304,7 @@ function init_list_multi(files) {
 	
 	var html = '';
 	
-	html += '[<a href="#" id="list">光谱显示</a>][<a href="#" id="compare_list">BG光谱对比（Ｂ－Ａ）</a>][多光谱比较]';
+	html += '[<a href="#" id="list">显示光谱</a>][<a href="#" id="compare_list">BG光谱对比（Ｂ－Ａ）</a>][多光谱比较]';
 	
 	html += '<table class="csv">';
 	html += '<tr><th>－</th><th>光谱文件</th></tr>';
@@ -327,7 +327,7 @@ function init_list_multi(files) {
 	}
 	html += '</table>';
 	html += '<form>';
-	html += '<input type="button" value="光谱显示">';
+	html += '<input type="button" value="显示光谱">';
 	html += '</form>';
 	$("#file_select").html(html);
 	$("#file_select input[type='button']").bind('click', function() {
@@ -5648,7 +5648,7 @@ function print_sp_info_multi(spectrums) {
 	html += '<p>URL: ';
 	html += '<a href="' + url + '" target="_blank">' + url + '</a></p>';
 	
-	html += '※スペクトルファイルの詳細情報は[スペクトル表示]で１ファイルのみ選んだときのみ表示されます．<br>';
+	html += '*只有在[查看频谱]中只选择一个文件时，才会显示频谱文件的详细信息。<br>';
 	
 	$("#sp_info").html(html);
 }
