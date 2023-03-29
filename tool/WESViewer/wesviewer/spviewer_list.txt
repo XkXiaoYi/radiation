@@ -7,3 +7,4 @@ K-40.xml,K-40(请打开对数)
 N.O.R.M._U.xml,N.O.R.M.-U
 Th-232.xml,Th-232
 Kr-85.xml,Kr-85
+Yu.xml,下雨天活性炭采集1H
