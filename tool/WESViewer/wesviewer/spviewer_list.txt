@@ -9,3 +9,4 @@ Th-232.xml,Th-232
 Kr-85.xml,Kr-85
 Ra-226.xml,Ra-226 0.01µCi
 Yu.xml,下雨天活性炭采集1H
+Yu_3H.xml,下雨天活性炭采集72H
